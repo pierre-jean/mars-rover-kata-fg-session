@@ -21,6 +21,7 @@ namespace MarsRover.Rover
         private Rover ApplyCommand(TurnLeftCommand command) => new Rover(_position, _direction.ToLeft());
 
         private Rover ApplyCommand(MoveForwardCommand command) => new Rover(_direction.MoveForward(_position), _direction);
+        
         public string PrintState() => $"{_position.X}:{_position.Y}:{_direction.AsString()}";
     }
 }
